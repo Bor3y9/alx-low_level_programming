@@ -17,6 +17,6 @@ putchar(ch);
 		putchar(ch);
 	}
 
-	purchar(10);
+	putchar(10);
 	return(0);
 }
