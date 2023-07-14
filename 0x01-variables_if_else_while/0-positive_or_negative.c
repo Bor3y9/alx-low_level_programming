@@ -5,18 +5,24 @@
  * main - checking for negativity
  *
  * Return:0(sucess)
+ 
  */
+
 int main(void)
 {
-int n;
-if(n<0)
-printf("%d is negative", n);
+	int n;
 
-else if(n>0)
-printf("%d is positive", n);
 
-else
-printf("%d is zero", n);
+	if (n > 0)
+		printf("%d is positive\n", n);
 
-return(0);
-}                                                                                                                                                                                                         
+	if (n == 0)
+		printf("%d is zero\n", n);
+
+	if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+
+	return (0);
+}
