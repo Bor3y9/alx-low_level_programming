@@ -1,15 +1,15 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * print_last_digit - print_last_digit
- * @n: the integer to be converted.
- * Return: the value of the last digit
+ *print_last_digit - function that print last digit of a number
+ *@n: number to be targeted
+ *Return: returns 0
  */
-
 int print_last_digit(int n)
 {
-n = n % 10;
-return n;
+    int lastdigit = n % 10;
+    if (lastdigit < 0)
+        lastdigit *= -1;
+
+    _putchar(lastdigit + '0');
+    return (lastdigit);
 }
