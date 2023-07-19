@@ -9,19 +9,20 @@
  */
 void print_to_98(int n)
 {
-int i;
-int cnt;
+
 if (n < 98)
-for (i = n; i < 98; i++)
 {
-printf("%d, ", i);
+for (n = n; n < 98; n++)
+{
+printf("%d, ", n);
 printf("%d\n", 98);
+}
 }
 else
 {
-for (cnt = n; cnt > 98; cnt--)
+for (n = n; n > 98; n--)
 {
-printf("%d, ", cnt);
+printf("%d, ", n);
 printf("%d\n", 98);
 }
 }
