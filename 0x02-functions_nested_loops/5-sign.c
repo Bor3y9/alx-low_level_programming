@@ -1,5 +1,6 @@
-#include "holberton.h"
-
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 /**
  * print_sign - Compare the variable N
  * @n: If is mayor than 0 show return 1 else 0
