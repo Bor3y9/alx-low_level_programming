@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "holberton.h"
 /**
  * print_times_table - prints the times table for n.
  * @n: The multiplication table requested.
@@ -19,31 +17,31 @@ void print_times_table(int n)
 				res = (i * j);
 				if (j != 0)
 				{
-					_putchar(',');
-					_putchar(' ');
+					putchar(',');
+					putchar(' ');
 				}
 				if (res < 10 && j != 0)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((res % 10) + '0');
+					putchar(' ');
+					putchar(' ');
+					putchar((res % 10) + '0');
 				}
 				else if (res >= 10 && res < 100)
 				{
-					_putchar(' ');
-					_putchar((res / 10) + '0');
-					_putchar((res % 10) + '0');
+					putchar(' ');
+					putchar((res / 10) + '0');
+					putchar((res % 10) + '0');
 				}
 				else if (res >= 100 && j != 0)
 				{
-					_putchar((res / 100) + '0');
-					_putchar((res / 10) % 10 + '0');
-					_putchar((res % 10) + '0');
+					putchar((res / 100) + '0');
+					putchar((res / 10) % 10 + '0');
+					putchar((res % 10) + '0');
 				}
 				else
-					_putchar((res % 10) + '0');
+					putchar((res % 10) + '0');
 			}
-			_putchar('\n');
+			putchar('\n');
 		}
 	}
-}
+
