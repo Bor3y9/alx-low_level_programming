@@ -1,30 +1,40 @@
 #include "main.h"
 
 /**
-* _sqrt_recursion - returns natural square root of a number
-* @n: integer
-* Return: natural square root or -1 if no square root for n
-**/
-int _sqrt_recursion(int n)
+ *_sqrt_helper - returns the natural square root of a number
+ *@low: lowest number to be evaluated
+ *@high: highest number to be evaluated
+ *@n: number to be evaluated
+ *Return: natural square root of n or -1
+ *if n does not have a natural square root
+ */
+int _sqrt_helper(long low, long high, long n)
 {
-return (natural_square(n, 1));
+	long mid;
 
+	if (low <= high)
+	{
+		mid = (high - low) / 2 + low;
+		if (mid * mid == n)
+			return (mid);
+		if (mid * mid > n)
+			return (_sqrt_helper(low, mid - 1, n));
+		return (_sqrt_helper(mid + 1, high, n));
+	}
+
+	return (-1);
 }
 
 /**
-* natural_square - a function that help to find natural_square
-* @x: integer
-* @y: integer
-* Return: square root or -1
-**/
+ *_sqrt_recursion - returns the natural square root of a number
+ *@n: number to be evaluated
+ *
+ *Return: natural square root of n
+ */
 
-int natural_square(int x, int y)
+int _sqrt_recursion(int n)
 {
-	int s = y * y;
-
-	if (s > x)
+	if (n < 0)
 		return (-1);
-	if (s == x)
-		return (y);
-	return (natural_square(x, y + 1));
+	return (_sqrt_helper(0, n, n));
 }
