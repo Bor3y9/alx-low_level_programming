@@ -1,0 +1,4 @@
+git add .
+git commit -m "linked list task"
+git push
+
